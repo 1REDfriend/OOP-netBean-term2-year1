@@ -1,0 +1,18 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 7, 2024, 9:05:25 PM
+    Author     : TEXR
+*/
+
+.background-dark-blue {
+    -fx-background-color: #01061c;
+    -fx-color-label-visible: #ffffff;
+}
+
+.background-dark-blue-secondary {
+    -fx-background-color: #202333;
+    -fx-color-label-visible: #ffffff;
+}
