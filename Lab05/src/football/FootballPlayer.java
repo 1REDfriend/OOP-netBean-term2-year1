@@ -16,7 +16,7 @@ public class FootballPlayer extends Player{
         return playerNumber;
     } 
     
-    public String getPlayerPosition() {
+    public String getPosition() {
         return position;
     }
     
@@ -28,8 +28,8 @@ public class FootballPlayer extends Player{
         position = p;
     }
     
-    public boolean isSamePosition(FootballPlayer f) {
-        if (position == f.position) {
+    public boolean isSamePosition(FootballPlayer p) {
+        if (position == p.position) {
             return true;
         }
         return false;
