@@ -28,7 +28,7 @@ public class Player {
     }
     
     public boolean isSameTeam(Player p) {
-        if (team == p.team) {
+        if (team.equals(p.team)) {
             return true;
         }
         return false;

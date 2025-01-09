@@ -29,7 +29,7 @@ public class FootballPlayer extends Player{
     }
     
     public boolean isSamePosition(FootballPlayer p) {
-        if (position == p.position) {
+        if (position.equals(p.position)) {
             return true;
         }
         return false;
