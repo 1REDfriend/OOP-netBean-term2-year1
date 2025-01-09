@@ -9,22 +9,22 @@ package polymophism;
  * @author TEXR
  */
 public class Food{
-    private int energy = 10;
-    private double price = 50;
+    private final static int energy = 10;
+    private static double price = 50;
     
-    public void setPrice(double p) {
-        if (p <= price) {
+    public static void setPrice(double price) {
+        if (price <= price) {
             System.out.println("Cannot update the food price.");
         } else {
-            price = p;
+            Food.price = price;
         }
     }
     
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
     
-    public int getEngergy() {
+    public static int getEnergy() {
         return energy;
     }
 }

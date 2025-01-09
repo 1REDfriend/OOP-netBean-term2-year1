@@ -9,7 +9,8 @@ package polymophism;
  * @author TEXR
  */
 public class Employee {
-    private String name, nationality = "Thai";
+    private String name;
+    private static String nationality="Thai";
     private int energy;
     private Wallet wallet;
     
@@ -21,36 +22,36 @@ public class Employee {
         return name;
     }
     
-    public void setName(String n) {
-        name = n;
-    }
-    
     public Wallet getWallet() {
         return wallet;
     }
     
-    public void setWallet(Wallet w) {
-        wallet = w;
+    public void setEnergy(int energy) {
+        this.energy = energy;
     }
     
-    public int getEngergy() {
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public static void setNationality(String nationality) {
+        Employee.nationality = nationality;
+    }
+    
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
+    }
+    
+    public int getEnergy() {
         return energy;
     }
     
-    public void setEnergy(int e) {
-        energy = e;
-    }
-    
-    public String getNationality() {
+    public static String getNationality() {
         return nationality;
     }
     
-    public void setNationality(String n) {
-        nationality = n;
-    }
-    
     public void eat(Food f) {
-        energy += f.getEngergy();
+        energy += Food.getEnergy();
     }
     
     public boolean buyFood(Seller s) {
@@ -62,7 +63,8 @@ public class Employee {
         return false;
     }
     
+    @Override
     public String toString() {
-        return "My name is  " + name + "\nI have " + energy + " energy left.\nI have a balance of " + wallet.getBalance() + " bath.";
+        return "My name is  " + this.getName() + ". \nI have " + this.getEnergy() + " energy left.\nI have a balance of " + wallet.getBalance() + " baht.";
     }
 }

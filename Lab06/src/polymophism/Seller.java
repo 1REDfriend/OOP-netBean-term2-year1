@@ -9,12 +9,11 @@ package polymophism;
  * @author TEXR
  */
 public class Seller extends Employee{
-    Food food = new Food();
-    
     public Food sell(Employee e) {
-        if (e.getWallet().getBalance() >= food.getPrice()) {
-            e.getWallet().setBalance(e.getWallet().getBalance() - food.getPrice());
-            this.getWallet().setBalance(this.getWallet().getBalance() + food.getPrice());
+        Food food = new Food();
+        if (e.getWallet().getBalance() >= Food.getPrice()) {
+            e.getWallet().setBalance(e.getWallet().getBalance() - Food.getPrice());
+            this.getWallet().setBalance(this.getWallet().getBalance() + Food.getPrice());
             return food;
         } 
         System.out.println("Your money is not enough.");
