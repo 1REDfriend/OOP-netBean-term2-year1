@@ -24,6 +24,11 @@ public class Programmer extends Employee{
     }
     
     public void coding(char str) {
+        if (this instanceof SeniorProgrammer) {
+            String temp = str+"";
+            coding(temp);
+            return;
+        }
         if (super.getEnergy() >= 30) {
             System.out.println("Your code is " + str);
             super.setEnergy(super.getEnergy() - 30);

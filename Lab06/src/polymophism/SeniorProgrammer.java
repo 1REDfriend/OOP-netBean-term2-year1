@@ -9,18 +9,6 @@ package polymophism;
  * @author TEXR
  */
 public class SeniorProgrammer extends Programmer {
-    @Override
-    public void coding(char str) {
-        if (super.getEnergy() >= 10) {
-            System.out.println("I'm coding about " + str);
-            super.setEnergy(super.getEnergy() - 5);
-            super.setHappiness(super.getHappiness() - 5);
-        } else {
-            System.out.println("ZzZzZz");
-            super.setEnergy(super.getEnergy() - 5);
-            super.setHappiness(super.getHappiness() - 5);
-        }
-    }
     
     @Override
     public void coding(String str) {
