@@ -63,6 +63,6 @@ class Pigeon extends Bird implements Flyable {
 
     @Override
     public String toString() {
-        return "Pigeon "+this.getWeight()+" kg and "+this.getHeight()+" cm. There are "+numberOfPigeon+" pigeons.";
+        return "Pigeon "+this.getWeight()+" kg and "+" "+this.getHeight()+" cm. There are "+numberOfPigeon+" pigeons.";
     }
 }
