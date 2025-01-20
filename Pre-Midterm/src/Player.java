@@ -79,19 +79,19 @@ public class Player {
     }
 
     public boolean equals(Player player) {
-        return (this.name == player.name && this.houses == houses);
+        return ((this.name == null ? player.name == null : this.name.equals(player.name)) && this.houses == houses);
     }
 
     public void attack(Player target, Spell spell) {
-        if (houses instanceof Hufflepuff) {
-            ((Hufflepuff) houses).attckSpell(this, target, spell);
-        } else if (houses instanceof Gryffindor) {
-            ((Gryffindor) houses).attckSpell(this, target, spell);
+        if (houses instanceof Hufflepuff hufflepuff) {
+            hufflepuff.attckSpell(this, target, spell);
+        } else if (houses instanceof Gryffindor gryffindor) {
+            gryffindor.attckSpell(this, target, spell);
         }
         if (target.getHP() <= 0) {
             System.out.println("[DEAD]: " + target.getName() + " was killed by " + name);
         }
-    }
+    } 
 
     public void protectFromPlayer(Player target) {
         if (this.houses instanceof Hufflepuff) {
