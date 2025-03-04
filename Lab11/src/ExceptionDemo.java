@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class ExceptionDemo {
 
     public static void main(String[] args) {
-        if (args.length < 3) {
+        if (args.length != 3) {
             System.out.println("Please enter 3 numbers as a, b, and c respectively.");
             return;
         }
