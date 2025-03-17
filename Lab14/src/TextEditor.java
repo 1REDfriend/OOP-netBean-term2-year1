@@ -36,6 +36,7 @@ public class TextEditor {
     private JTextArea textArea1;
     
     public TextEditor() {
+        
         this.frame1 = new JFrame("My Text Editor");
         this.frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame1.setLocationRelativeTo(null);
@@ -133,7 +134,7 @@ public class TextEditor {
                        System.out.println("Save Text File Complete.");
                    } catch (IOException ex) {
                         Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                   }
                }
             }
         
